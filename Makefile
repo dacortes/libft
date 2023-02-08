@@ -5,10 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/08 09:51:10 by dacortes          #+#    #+#              #
-#    Updated: 2023/02/08 10:14:55 by dacortes         ###   ########.fr        #
+#    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
+#    Updated: 2023/02/08 11:20:47 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+# =============================== VARIABLES ================================== #
 
 # =============================== VARIABLES ================================== #
 
@@ -27,7 +29,7 @@ SRCS	=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c\
 				ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
 				ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
 				ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
-				ft_printf.c ft_type_cs.c ft_type_pxX.c ft_type_idu.c\
+				ft_printf.c ft_type_cs.c ft_type_idupxX.c\
 				get_next_line_bonus.c get_next_line_utils_bonus.c\
 				get_next_line.c get_next_line_utils.c
 				

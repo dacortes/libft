@@ -3,37 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:32:56 by dacortes          #+#    #+#             */
-/*   Updated: 2022/10/28 11:25:17 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/02/08 10:33:03 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
 
-int	ft_type(va_list arg, char const type, int print_f)
+static int	ft_types(va_list args, char const type, int *count)
 {
 	if (type == '%')
-		print_f = ft_putchar('%', print_f);
+		*count = type_c('%', count);
 	if (type == 'c')
-		print_f = ft_putchar(va_arg(arg, int), print_f);
+		*count = type_c(va_arg(args, int), count);
 	if (type == 's')
-		print_f = ft_putstr(va_arg(arg, char *), print_f);
-	if (type == 'p')
-		print_f = ft_putptr(va_arg(arg, void *), print_f);
-	if (type == 'i' || type == 'd')
-		print_f = ft_puttype_id(va_arg(arg, int), print_f);
+		*count = type_s(va_arg(args, char *), count);
+	if (type == 'd' || type == 'i')
+		*count = type_di(va_arg(args, int), count);
 	if (type == 'u')
-		print_f = ft_putnum(va_arg(arg, unsigned int), print_f);
+		*count = type_u_xlow_xup(va_arg(args, unsigned int), count, 0, 10);
 	if (type == 'x')
-		print_f = ft_puttypex(va_arg(arg, unsigned int), print_f);
+		*count = type_u_xlow_xup(va_arg(args, unsigned int), count, 1, 16);
 	if (type == 'X')
-		print_f = ft_converhe_x(va_arg(arg, unsigned int), print_f);
-	return (print_f);
+		*count = type_u_xlow_xup(va_arg(args, unsigned int), count, 2, 16);
+	if (type == 'p')
+		*count = type_p(va_arg(args, unsigned long int), count);
+	return (*count);
 }
 
-int	ft_check_str(va_list arg, char const *str, int print_f)
+static int	ft_checking(va_list args, char const *str, int *count)
 {
 	int	i;
 
@@ -42,30 +42,29 @@ int	ft_check_str(va_list arg, char const *str, int print_f)
 	{
 		if (str[i] == '%')
 		{
-			print_f = ft_type(arg, str[i + 1], print_f);
-			if (print_f == -1)
+			if (ft_types(args, str[i + 1], count) == -1)
 				return (-1);
 			i++;
 		}
 		else
 		{
-			print_f = ft_putchar(str[i], print_f);
-			if (print_f == -1)
+			if (type_c(str[i], count) == -1)
 				return (-1);
 		}
 		i++;
 	}
-	return (print_f);
+	return (*count);
 }
 
 int	ft_printf(char const *str, ...)
 {
-	int		print_f;
-	va_list	arg;
+	int		count;
+	va_list	args;
 
-	print_f = 0;
-	va_start(arg, str);
-	print_f = ft_check_str(arg, str, print_f);
-	va_end(arg);
-	return (print_f);
+	count = 0;
+	va_start(args, str);
+	if (ft_checking(args, str, &count) == -1)
+		return (-1);
+	va_end(args);
+	return (count);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 11:27:07 by dacortes          #+#    #+#             */
-/*   Updated: 2022/10/28 11:27:55 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/02/08 11:11:28 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,18 @@
 # include<unistd.h>
 # include<stdarg.h>
 
-//imprimir str y chr
-int	ft_putchar(int c, int print_f);
-int	ft_putstr(char *str, int print_f);
+// =========================== CHAR AND STR ================================= //
 
-//imprimir hexa y punteros
-int	ft_putptr(void *ptr, int print_f);
-int	ft_puttypex(unsigned int hex, int print_f);
-int	ft_converhe_x(unsigned int hex, int print_f);
+int	type_c(char c, int *i);
+int	type_s(char *c, int *i);
 
-//para imprimir int y unisigned int
-int	ft_puttype_id(int num, int print_f);
-int	ft_putnum(unsigned int num, int print_f);
+// =========================== PTRS AND NUM ================================= //
 
-//Validar el type y llamar a la funcion correspondiente
+int	type_di(int n, int *i);
+int	type_p(unsigned long n, int *i);
+int	type_u_xlow_xup(unsigned int n, int *i, int opt, unsigned int bas);
+
+// =========================== MAIN FUNTIONS ================================ //
 int	ft_printf(char const *str, ...);
-int	ft_type(va_list arg, char const type, int print_f);
-int	ft_check_str(va_list arg, char const *str, int print_f);
+
 #endif

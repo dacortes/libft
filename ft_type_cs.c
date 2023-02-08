@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_type_cps.c                                      :+:      :+:    :+:   */
+/*   ft_type_cs.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:17:07 by dacortes          #+#    #+#             */
-/*   Updated: 2022/10/28 11:29:20 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/02/08 10:35:20 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
 
-int	ft_putchar(int c, int print_f)
+int	type_c(char c, int *i)
 {
-	if (write(1, &c, 1) != 1)
+	if (write(1, &c, 1) == -1)
 		return (-1);
-	print_f++;
-	return (print_f);
+	*i = (*i + 1);
+	return (*i);
 }
 
-int	ft_putstr(char *str, int print_f)
+int	type_s(char *c, int *i)
 {
-	int	i;
+	int	j;
 
-	i = 0;
-	if (!str)
-		str = "(null)";
-	while (str[i])
+	j = 0;
+	if (!c)
+		c = "(null)";
+	while (c[j] != '\0')
 	{
-		print_f = ft_putchar(str[i++], print_f);
-		if (print_f == -1)
+		if (type_c(c[j], i) == -1)
 			return (-1);
+		j++;
 	}
-	return (print_f);
+	return (*i);
 }
