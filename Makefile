@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+         #
+#    By: dacortes <dacortes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
-#    Updated: 2023/02/08 11:20:47 by dacortes         ###   ########.fr        #
+#    Updated: 2023/02/28 18:10:12 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,26 +64,26 @@ all:	dir $(NAME)
 dir: 
 	@mkdir -p $(D_OBJ)
 $(D_OBJ)/%.o:%.c
-	@printf "$(ligth)$(Y)\r $@$(E)"
+	@printf "$(ligth)$(Y)\r$@.$(E)"
 	@$(CC) -MMD $(FLAGS) -c $< -o $@
 $(NAME):	${OBJ}
 	@$(LIBC) $(NAME) $(OBJ)
 	@touch $(NAME)
-	@echo -e "\n$(B)$(ligth)-->$(G) ==== Project libft compiled! ==== ✅$(E)"
+	@echo "\n$(B)$(ligth)-->$(G) ==== Project libft compiled! ==== ✅$(E)"
 bonus:	dir ${B_OBJ} $(NAME)
 	@if [ -f bonus ]; then\
-		echo -e "$(B)$(ligth)--> make:$(E)$(ligth) 'bonus' is up to date.$(E)";\
+		echo "$(B)$(ligth)--> make:$(E)$(ligth) 'bonus' is up to date.$(E)";\
 	else\
 		$(LIBC) $(NAME) $(OBJ) $(B_OBJ);\
 		touch bonus;\
-		echo -e "$(B)$(ligth)-->$(G)Bonus created OK$(E)";\
+		echo "$(B)$(ligth)-->$(G)Bonus created OK$(E)";\
 	fi
 # ========================== CLEAN   ===================================== #
 .PHONY: clean fclean re
 clean:
 	@$(RM) $(D_OBJ) bonus
-	@echo -e "$(B)$(ligth)-->$(E)$(ligth) ==== Libft object files cleaned! ==== ✅$(E)"
+	@echo "$(B)$(ligth)-->$(E)$(ligth) ==== Libft object files cleaned! ==== ✅$(E)"
 fclean: clean
 	@$(RM) $(NAME)
-	@echo -e "$(B)$(ligth)-->$(E)$(ligth) ==== Libft executable files and name cleaned! ==== ✅$(E)"
+	@echo "$(B)$(ligth)-->$(E)$(ligth) ==== Libft executable files and name cleaned! ==== ✅$(E)"
 re: fclean all
