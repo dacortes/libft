@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 12:15:41 by dacortes          #+#    #+#             */
-/*   Updated: 2022/11/17 14:58:15 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/04/28 17:28:32 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"get_next_line_bonus.h"
 
-void	*ft_calloc(size_t count, size_t size)
+/*void	*ft_calloc(size_t count, size_t size)
 {
 	void	*memory;
 	size_t	asign;
@@ -36,7 +36,7 @@ size_t	ft_strlen(const char *s)
 	while (s[count])
 		count++;
 	return (count);
-}
+}*/
 
 char	*ft_free(char **buff, char **buff2)
 {
@@ -53,7 +53,7 @@ char	*ft_free(char **buff, char **buff2)
 	return (NULL);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+/*char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*n_str;
 	int		i;
@@ -86,4 +86,4 @@ char	*ft_strchr(const char *s, int c)
 	if ((char)c == '\0')
 		return ((char *)s);
 	return (NULL);
-}
+}*/

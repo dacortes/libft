@@ -6,26 +6,20 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 10:56:44 by dacortes          #+#    #+#             */
-/*   Updated: 2023/02/08 10:12:01 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/04/28 17:29:15 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdlib.h>
+# include"libft.h"
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 600
 # endif
 
-size_t	ft_strlen(const char *s);
-char	*ft_strjoin(char *s1, char *s2);
-char	*ft_strchr(const char *s, int c);
 char	*ft_free(char **buff, char **buff2);
-void	*ft_calloc(size_t count, size_t size);
 
 char	*get_next_line(int fd);
 char	*ft_next_buff(char *buf);
