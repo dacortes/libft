@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:28:48 by dacortes          #+#    #+#             */
-/*   Updated: 2023/05/11 15:35:06 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/05/11 16:10:33 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ char	*ft_addstart_char(const char *str, const char c)
 	addend[++i] = c;
 	while (str[i++])
 		addend[i] = str[i - 1];
-	addend[i] = '\0';
 	return (addend);
 }

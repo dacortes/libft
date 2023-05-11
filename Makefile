@@ -6,7 +6,7 @@
 #    By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
-#    Updated: 2023/05/11 15:30:01 by dacortes         ###   ########.fr        #
+#    Updated: 2023/05/11 17:16:06 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ all:	dir $(NAME)
 dir: 
 	@mkdir -p $(D_OBJ)
 $(D_OBJ)/%.o:%.c
-	@printf "$(ligth)$(Y)\r$@.$(E)"
+	@printf "$(ligth)$(Y)$@                                           \r$(E)"
 	@$(CC) -MMD $(FLAGS) -c $< -o $@
 $(NAME):	${OBJ}
 	@$(LIBC) $(NAME) $(OBJ)
