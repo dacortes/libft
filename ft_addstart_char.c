@@ -6,12 +6,12 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:28:48 by dacortes          #+#    #+#             */
-/*   Updated: 2023/05/11 15:33:24 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/05/11 15:35:06 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-/* aaaa*/
+
 char	*ft_addstart_char(const char *str, const char c)
 {
 	int		i;
