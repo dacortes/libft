@@ -6,7 +6,7 @@
 #    By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
-#    Updated: 2023/05/17 11:12:14 by dacortes         ###   ########.fr        #
+#    Updated: 2023/06/01 19:15:39 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ CC		=	gcc
 RM		=	rm -rf
 FLAGS	=	-Wall -Wextra -Werror
 LIBC	=	ar -rcs
+CURRENT_FILE = 0
+PROGRESS_BAR :=
 
 # =========================== SOURCES ======================================== #
 
@@ -54,6 +56,8 @@ R = \033[31m
 G = \033[32m
 Y = \033[33m
 B = \033[34m
+P = \033[35m
+C = \033[36m
 #Font
 ligth = \033[1m
 dark = \033[2m
@@ -63,17 +67,21 @@ italic = \033[3m
 all:	dir $(NAME)
 -include $(DEP)
 -include $(B_DEP)
+
 dir: 
-	@mkdir -p $(D_OBJ)
-$(D_OBJ)/%.o:%.c
-	@printf "$(ligth)$(Y)$@                                           \r$(E)"
-	@$(CC) -MMD $(FLAGS) -c $< -o $@
+	-mkdir $(D_OBJ)
+
+$(D_OBJ)/%.o: %.c
+	$(CC) -MMD $(FLAGS) -c $< -o $@
+	$(eval CURRENT_FILE := $(shell echo $$(($(CURRENT_FILE) + 1)))) \
+	$(eval PROGRESS_BAR := $(shell awk "BEGIN { printf \"%.0f\", $(CURRENT_FILE)*100/$(TOTAL_FILES) }")) \
+	printf "$B$(ligth)Compiling libft:$E $(ligth)%-30s [%-50s] %d%%\r" "$<..." "$(shell printf '=%.0s' {1..$(shell echo "$(PROGRESS_BAR)/2" | bc)})" $(PROGRESS_BAR)
 $(NAME):	${OBJ}
-	@$(LIBC) $(NAME) $(OBJ)
-	@touch $(NAME)
-	@echo "\n$(B)$(ligth)-->$(G) ==== Project libft compiled! ==== ✅$(E)"
+	$(LIBC) $(NAME) $(OBJ)
+	touch $(NAME)
+	echo "\n\n✅ ==== $(B)$(ligth)Project libft compiled!$(E) ==== ✅"
 bonus:	dir ${B_OBJ} $(NAME)
-	@if [ -f bonus ]; then\
+	if [ -f bonus ]; then\
 		echo "$(B)$(ligth)--> make:$(E)$(ligth) 'bonus' is up to date.$(E)";\
 	else\
 		$(LIBC) $(NAME) $(OBJ) $(B_OBJ);\
@@ -81,11 +89,13 @@ bonus:	dir ${B_OBJ} $(NAME)
 		echo "$(B)$(ligth)-->$(G)Bonus created OK$(E)";\
 	fi
 # ========================== CLEAN   ===================================== #
-.PHONY: clean fclean re
+.PHONY: all clean fclean re bonus
 clean:
-	@$(RM) $(D_OBJ) bonus
-	@echo "$(B)$(ligth)-->$(E)$(ligth) ==== Libft object files cleaned! ==== ✅$(E)"
+	$(RM) $(D_OBJ) bonus
+	echo "✅ ==== $(G)$(ligth)Libft object files cleaned!$(E) ==== ✅"
 fclean: clean
-	@$(RM) $(NAME)
-	@echo "$(B)$(ligth)-->$(E)$(ligth) ==== Libft executable files and name cleaned! ==== ✅$(E)"
+	$(RM) $(NAME)
+	echo "✅ ==== $(G)$(ligth)Libft executable files and name cleaned!$(E) ==== ✅\n"
 re: fclean all
+TOTAL_FILES := $(words $(SRCS))
+.SILENT:
