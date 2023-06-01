@@ -6,7 +6,7 @@
 #    By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
-#    Updated: 2023/06/01 19:15:39 by dacortes         ###   ########.fr        #
+#    Updated: 2023/06/01 19:24:26 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ all:	dir $(NAME)
 dir: 
 	-mkdir $(D_OBJ)
 
+#Compilation with loading bar
 $(D_OBJ)/%.o: %.c
 	$(CC) -MMD $(FLAGS) -c $< -o $@
 	$(eval CURRENT_FILE := $(shell echo $$(($(CURRENT_FILE) + 1)))) \
@@ -82,20 +83,20 @@ $(NAME):	${OBJ}
 	echo "\n\n✅ ==== $(B)$(ligth)Project libft compiled!$(E) ==== ✅"
 bonus:	dir ${B_OBJ} $(NAME)
 	if [ -f bonus ]; then\
-		echo "$(B)$(ligth)--> make:$(E)$(ligth) 'bonus' is up to date.$(E)";\
+		echo "$(B)$(ligth)make:$(E)$(ligth) 'bonus' is up to date.$(E)";\
 	else\
 		$(LIBC) $(NAME) $(OBJ) $(B_OBJ);\
 		touch bonus;\
-		echo "$(B)$(ligth)-->$(G)Bonus created OK$(E)";\
+		echo "$B$(ligth)Compiling libft:$E";\
 	fi
 # ========================== CLEAN   ===================================== #
 .PHONY: all clean fclean re bonus
 clean:
 	$(RM) $(D_OBJ) bonus
-	echo "✅ ==== $(G)$(ligth)Libft object files cleaned!$(E) ==== ✅"
+	echo "✅ ==== $(P)$(ligth)Libft object files cleaned!$(E) ==== ✅"
 fclean: clean
 	$(RM) $(NAME)
-	echo "✅ ==== $(G)$(ligth)Libft executable files and name cleaned!$(E) ==== ✅\n"
+	echo "✅ ==== $(P)$(ligth)Libft executable files and name cleaned!$(E) ==== ✅\n"
 re: fclean all
 TOTAL_FILES := $(words $(SRCS))
 .SILENT:
