@@ -6,7 +6,7 @@
 #    By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
-#    Updated: 2023/06/01 19:24:26 by dacortes         ###   ########.fr        #
+#    Updated: 2023/06/01 19:30:09 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,7 @@ $(D_OBJ)/%.o: %.c
 	$(CC) -MMD $(FLAGS) -c $< -o $@
 	$(eval CURRENT_FILE := $(shell echo $$(($(CURRENT_FILE) + 1)))) \
 	$(eval PROGRESS_BAR := $(shell awk "BEGIN { printf \"%.0f\", $(CURRENT_FILE)*100/$(TOTAL_FILES) }")) \
-	printf "$B$(ligth)Compiling libft:$E $(ligth)%-30s [%-50s] %d%%\r" "$<..." "$(shell printf '=%.0s' {1..$(shell echo "$(PROGRESS_BAR)/2" | bc)})" $(PROGRESS_BAR)
+	printf "$B$(ligth)⏳Compiling libft:$E $(ligth)%-30s [%-50s] %d%%\r" "$<..." "$(shell printf '=%.0s' {1..$(shell echo "$(PROGRESS_BAR)/2" | bc)})" $(PROGRESS_BAR)
 $(NAME):	${OBJ}
 	$(LIBC) $(NAME) $(OBJ)
 	touch $(NAME)
@@ -87,7 +87,7 @@ bonus:	dir ${B_OBJ} $(NAME)
 	else\
 		$(LIBC) $(NAME) $(OBJ) $(B_OBJ);\
 		touch bonus;\
-		echo "$B$(ligth)Compiling libft:$E";\
+		echo "$B$(ligth)⏳Compiling libft:$E";\
 	fi
 # ========================== CLEAN   ===================================== #
 .PHONY: all clean fclean re bonus
