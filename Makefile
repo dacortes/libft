@@ -6,7 +6,7 @@
 #    By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
-#    Updated: 2023/06/02 17:41:44 by dacortes         ###   ########.fr        #
+#    Updated: 2023/06/17 15:20:43 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,12 @@ $(D_OBJ)/%.o: %.c
 	$(CC) -MMD $(FLAGS) -c $< -o $@
 	$(eval CURRENT_FILE := $(shell echo $$(($(CURRENT_FILE) + 1)))) \
 	$(eval PROGRESS_BAR := $(shell awk "BEGIN { printf \"%.0f\", $(CURRENT_FILE)*100/$(TOTAL_FILES) }")) \
-	printf "$B$(ligth)⏳Compiling libft:$E $(ligth)%-30s [%-50s] %d%%\r" "$<..." "$(shell printf '=%.0s' {1..$(shell echo "$(PROGRESS_BAR)/2" | bc)})" $(PROGRESS_BAR)
+	printf "\r$B$(ligth)⏳Compiling libft:$E $(ligth)%-30s [$(CURRENT_FILE)/$(TOTAL_FILES)] [%-50s] %3d%%\033[K" \
+	"$<..." "$(shell printf '$(G)█%.0s$(E)$(ligth)' {1..$(shell echo "$(PROGRESS_BAR)/2" | bc)})" $(PROGRESS_BAR)
+	
+	@if [ $(PROGRESS_BAR) = 100 ]; then \
+		echo "$(B) All done$(E)"; \
+	fi
 $(NAME):	${OBJ}
 	$(LIBC) $(NAME) $(OBJ)
 	touch $(NAME)
