@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 14:00:29 by dacortes          #+#    #+#             */
-/*   Updated: 2023/05/17 11:11:53 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:26:05 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ char	**ft_split(char const *s, char c);
 char	*ft_addend_char(const char *str, const char c);
 char	*ft_addstart_char(const char *str, const char c);
 int		ft_double_ptr_len(void **ptr);
+int		ft_strchrpos(const char *str, char c);
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
