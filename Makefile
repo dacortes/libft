@@ -6,7 +6,7 @@
 #    By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
-#    Updated: 2023/06/17 15:20:43 by dacortes         ###   ########.fr        #
+#    Updated: 2023/07/11 12:41:48 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ SRCS	=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c\
 				ft_printf.c ft_type_cs.c ft_type_idupxX.c\
 				get_next_line_bonus.c get_next_line_utils_bonus.c\
 				get_next_line.c get_next_line_utils.c\
-				ft_addend_char.c ft_addstart_char.c\
+				ft_addend_char.c ft_addstart_char.c ft_strchrpos.c\
 				ft_double_ptrlen.c\
 				fd_type_cs.c fd_type_idup.c fd_type_xX.c fd_printf.c
 				
