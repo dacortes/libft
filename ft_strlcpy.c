@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:05:50 by dacortes          #+#    #+#             */
-/*   Updated: 2022/10/11 10:30:03 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:01:49 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

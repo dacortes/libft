@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 11:47:47 by dacortes          #+#    #+#             */
-/*   Updated: 2022/09/30 13:57:21 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:01:03 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 static int	ft_cwords(const char *str, char c)
 {

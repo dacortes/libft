@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:32:47 by dacortes          #+#    #+#             */
-/*   Updated: 2022/10/10 17:20:57 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:02:46 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

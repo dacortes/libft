@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:17:48 by dacortes          #+#    #+#             */
-/*   Updated: 2022/10/13 11:28:24 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:01:14 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

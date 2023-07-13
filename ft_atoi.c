@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 10:42:21 by dacortes          #+#    #+#             */
-/*   Updated: 2022/10/13 11:28:21 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:04:20 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/**/
-#include"libft.h"
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -24,7 +24,7 @@ int	ft_atoi(const char *str)
 	while (str[c] && (str[c] == ' ' || str[c] == '\n'
 			|| str[c] == '\t' || str[c] == '\v' || str[c] == '\f'
 			|| str[c] == '\r'))
-			c++;
+		c++;
 	if (str[c] == '+' || str[c] == '-')
 		if (str[c++] == '-')
 			s *= -1;

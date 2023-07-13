@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 15:45:23 by dacortes          #+#    #+#             */
-/*   Updated: 2022/10/13 11:18:02 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:02:14 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *h, const char *n, size_t len)
 {

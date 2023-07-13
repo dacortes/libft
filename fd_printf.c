@@ -6,11 +6,11 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 17:29:42 by dacortes          #+#    #+#             */
-/*   Updated: 2023/06/02 17:38:18 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 09:57:29 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_printf.h"
+#include "ft_printf.h"
 
 static int	ft_types(int fd, va_list args, char const type, int *count)
 {

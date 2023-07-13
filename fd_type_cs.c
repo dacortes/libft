@@ -6,11 +6,11 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 19:57:05 by dacortes          #+#    #+#             */
-/*   Updated: 2023/06/01 20:06:02 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 09:57:34 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_printf.h"
+#include "ft_printf.h"
 
 int	fd_type_c(int fd, char c, int *i)
 {

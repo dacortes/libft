@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 12:12:24 by dacortes          #+#    #+#             */
-/*   Updated: 2022/11/16 14:12:51 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:06:34 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"get_next_line.h"
+#include "get_next_line.h"
 
 char	*ft_next_line(char *buf, char *line)
 {
@@ -60,7 +60,7 @@ char	*ft_next_buff(char *buf)
 }
 
 char	*ft_protec_join(char *buffer, char *reader)
-{	
+{
 	char	*temp;
 
 	temp = ft_strjoin(buffer, reader);

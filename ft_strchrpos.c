@@ -6,11 +6,11 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 12:34:34 by dacortes          #+#    #+#             */
-/*   Updated: 2023/07/11 12:40:43 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:01:21 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	ft_strchrpos(const char *str, char c)
 {

@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 11:20:55 by dacortes          #+#    #+#             */
-/*   Updated: 2022/10/11 10:55:56 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 09:59:57 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

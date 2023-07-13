@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacortes <dacortes@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:00:22 by dacortes          #+#    #+#             */
-/*   Updated: 2022/10/11 09:52:23 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:00:18 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

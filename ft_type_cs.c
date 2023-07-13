@@ -6,11 +6,11 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:17:07 by dacortes          #+#    #+#             */
-/*   Updated: 2023/02/08 10:35:20 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:02:49 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_printf.h"
+#include "ft_printf.h"
 
 int	type_c(char c, int *i)
 {

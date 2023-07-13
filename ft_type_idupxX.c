@@ -6,11 +6,11 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 09:15:45 by dacortes          #+#    #+#             */
-/*   Updated: 2023/02/08 11:04:03 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:02:52 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_printf.h"
+#include "ft_printf.h"
 
 int	type_di(int n, int *i)
 {

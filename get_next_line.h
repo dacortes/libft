@@ -6,14 +6,14 @@
 /*   By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 10:56:44 by dacortes          #+#    #+#             */
-/*   Updated: 2023/04/28 17:29:15 by dacortes         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:06:15 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include"libft.h"
+# include "libft.h"
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 600
