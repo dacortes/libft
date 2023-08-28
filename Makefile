@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dacortes <dacortes@student.42barcelona.    +#+  +:+       +#+         #
+#    By: dacortes <dacortes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
-#    Updated: 2023/07/13 17:01:40 by dacortes         ###   ########.fr        #
+#    Updated: 2023/08/28 12:43:09 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ SRCS	=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c\
 				get_next_line.c get_next_line_utils.c\
 				ft_addend_char.c ft_addstart_char.c ft_strchrpos.c\
 				ft_double_ptrlen.c ft_close_del.c\
-				fd_type_cs.c fd_type_idup.c fd_type_xX.c fd_printf.c
+				fd_type_cs.c fd_type_idup.c fd_type_xX.c fd_printf.c\
+				ft_difcpy.c
 				
 BONUS 	= 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c\
 				ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c\
