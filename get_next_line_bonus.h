@@ -21,6 +21,10 @@
 #  define BUFFER_SIZE 600
 # endif
 
+# ifndef OPEN_MAX
+#  define OPEN_MAX 10240
+# endif
+
 char	*ft_free(char **buff, char **buff2);
 
 char	*get_next_line(int fd);
