@@ -6,7 +6,7 @@
 #    By: codespace <codespace@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
-#    Updated: 2024/06/03 17:20:52 by codespace        ###   ########.fr        #
+#    Updated: 2024/06/03 17:37:27 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,7 @@ $(NAME): $(OBJECTS)
 	@echo "\n✅ ==== $(BLUE)$(ligth)Project $(NAME) compiled!$(E) ==== ✅"
 
 $(DIRECTORIES_UTILS)/%.o: %.c
+	@printf "  $(ligth)Compiling $(BLUE)$<$(END)                                    "
 	@$(CC) -MMD $(CFLAGS) -c $< -o $@
 	@$(call progress,$<)
 
