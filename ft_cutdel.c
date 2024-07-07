@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:44:12 by dacortes          #+#    #+#             */
-/*   Updated: 2023/09/12 13:44:35 by dacortes         ###   ########.fr       */
+/*   Updated: 2024/07/07 11:19:26 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_cutdel(char	*str, int start, int del, int *cnt)
 	int		len;
 	int		i;
 
-	if (!str || !str[0] || !del)
+	if (!str || !str[0])
 		return (NULL);
 	len = start;
 	while (str[len] && str[len] != del)
