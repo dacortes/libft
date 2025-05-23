@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 14:00:29 by dacortes          #+#    #+#             */
-/*   Updated: 2023/12/21 18:47:21 by dacortes         ###   ########.fr       */
+/*   Updated: 2025/05/23 09:04:31 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);

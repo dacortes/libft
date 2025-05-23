@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: codespace <codespace@student.42.fr>        +#+  +:+       +#+         #
+#    By: dacortes <dacortes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 10:25:51 by dacortes          #+#    #+#              #
-#    Updated: 2024/06/04 14:08:25 by codespace        ###   ########.fr        #
+#    Updated: 2025/05/23 09:05:11 by dacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SOURCES =	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c\
 				ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c\
 				ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_memchr.c\
 				ft_strchr.c ft_memcmp.c ft_strrchr.c ft_strncmp.c ft_strnstr.c\
-				ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
+				ft_atoi.c ft_calloc.c ft_realloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
 				ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
 				ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 				ft_printf.c ft_type_cs.c ft_type_idupxX.c\
@@ -87,7 +87,7 @@ bonus: dir $(BONUS_OBJECTS) $(NAME)
 		echo "\n$(BLUE)$(ligth)make:$(E)$(ligth) 'bonus' is up to date.$(E)";\
 	else\
 		$(LIBC) $(NAME) $(OBJ) $(BONUS_OBJECTS);\
-		touch bonus;\
+		touch .bonus;\
 		echo "\n$(BLUE)$(ligth)⏳Compiling $(NAME):$(END)";\
 	fi
 
@@ -104,7 +104,7 @@ clean:
 	echo "✅ ==== $(PURPLE)$(ligth)Libft object files cleaned!$(E) ==== ✅"
 
 fclean: clean
-	$(RMV) $(NAME)
+	$(RMV) $(NAME) .bonus
 	echo "✅ ==== $(PURPLE)$(ligth)$(NAME) executable files and name cleaned!$(E) ==== ✅"
 
 define progress
@@ -124,6 +124,6 @@ endef
 -include $(DEPENDENCIES)
 
 re: fclean all
-.PHONY: all clean progress fclean
+.PHONY: all clean progress fclean bonus
 COMPILED_FILES=0
 .SILENT:
