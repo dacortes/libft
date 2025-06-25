@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:40:32 by dacortes          #+#    #+#             */
-/*   Updated: 2025/06/25 15:41:03 by dacortes         ###   ########.fr       */
+/*   Updated: 2025/06/25 18:56:06 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static int	ft_ispn(int num)
 	return (num);
 }
 
-static int	num_len(long long num)
+static size_t	num_len(long long num)
 {
-	int	len;
+	size_t	len;
 
 	len = (num <= 0);
 	while (num)
@@ -32,7 +32,7 @@ static int	num_len(long long num)
 	return (len);
 }
 
-char	*ft_ltoa(long long num, int *len)
+char	*ft_ltoa(long long num, size_t *len)
 {
 	char	*str;
 
