@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:40:32 by dacortes          #+#    #+#             */
-/*   Updated: 2025/06/25 18:56:06 by dacortes         ###   ########.fr       */
+/*   Updated: 2025/06/27 11:42:46 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ static size_t	num_len(long long num)
 	return (len);
 }
 
+#include <stdio.h>
+
 char	*ft_ltoa(long long num, size_t *len)
 {
 	char	*str;
@@ -46,6 +48,8 @@ char	*ft_ltoa(long long num, size_t *len)
 		str[0] = '-';
 		num = -((unsigned long long)num);
 	}
+	else if (num == 0)
+		str[0] = '0';
 	while (num != 0)
 	{
 		(*len)--;
