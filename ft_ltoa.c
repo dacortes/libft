@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:40:32 by dacortes          #+#    #+#             */
-/*   Updated: 2025/06/27 11:42:46 by dacortes         ###   ########.fr       */
+/*   Updated: 2025/06/27 15:32:17 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,16 @@ static size_t	num_len(long long num)
 
 #include <stdio.h>
 
-char	*ft_ltoa(long long num, size_t *len)
+char	*ft_ltoa(long long num)
 {
 	char	*str;
+	size_t	len;
 
-	(*len) = num_len(num);
-	str = malloc(sizeof(char) * ((*len) + 1));
+	len = num_len(num);
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	str[*len] = '\0';
+	str[len] = '\0';
 	if (num < 0)
 	{
 		str[0] = '-';
@@ -52,8 +53,8 @@ char	*ft_ltoa(long long num, size_t *len)
 		str[0] = '0';
 	while (num != 0)
 	{
-		(*len)--;
-		str[*len] = ft_ispn(num % 10) + '0';
+		len--;
+		str[len] = ft_ispn(num % 10) + '0';
 		num = num / 10;
 	}
 	return (str);

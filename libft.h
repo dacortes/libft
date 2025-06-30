@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 14:00:29 by dacortes          #+#    #+#             */
-/*   Updated: 2025/06/25 18:55:53 by dacortes         ###   ########.fr       */
+/*   Updated: 2025/06/27 15:32:33 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	*ft_difcpy(char *str, char c, int *start);
 char	*ft_strcpy(char *s1, const char *s2);
 char	*ft_cutdel(char	*str, int start, int del, int *cnt);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
-char	*ft_ltoa(long long num, size_t *len);
+char	*ft_ltoa(long long num);
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
