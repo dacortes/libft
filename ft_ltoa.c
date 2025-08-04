@@ -6,7 +6,7 @@
 /*   By: dacortes <dacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:40:32 by dacortes          #+#    #+#             */
-/*   Updated: 2025/06/27 15:32:17 by dacortes         ###   ########.fr       */
+/*   Updated: 2025/08/04 10:25:47 by dacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ static size_t	num_len(long long num)
 	}
 	return (len);
 }
-
-#include <stdio.h>
 
 char	*ft_ltoa(long long num)
 {
